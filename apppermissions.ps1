@@ -15,4 +15,4 @@ Write-Host "Processing: $($app.DisplayName)"
 }
 
 $appList | Export-Csv -Path "D:\temp\appList.csv" -NoTypeInformation
-Write-Host "Exported applications with no user consents are saved to CSV successfully: "."
+Write-Host "Exported applications with no user consents are saved to CSV successfully: ".
