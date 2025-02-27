@@ -3,7 +3,7 @@ $enterpriseApps = Get-MgServicePrincipal -All
 $appList = @() 
 foreach ($app in $enterpriseApps) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 Write-Host "Processing: $($app.DisplayName)"
-                      $consents = Get-MgOauth2PermissionGrant -Filter "clientId eq '$($app.AppId)'" -All
+                      $consents = Get-MgOauth2PermissionGrant -Filter "ClientId eq '$($app.AppId)'"
                         if ($consents.Count -eq 0){
                           Write-Host "No user consents found for: '$($app.DisplayName)'"
                           $appList += [PSCustomObject]@{
